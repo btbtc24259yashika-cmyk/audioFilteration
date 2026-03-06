@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>🛰 DEFENCE COMM SIGNAL PROCESSOR</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="container">
+        <h1>🛰 DEFENCE COMMUNICATION SIGNAL ENHANCER</h1>
+        
+        <div class="control-panel">
+            <button id="recordBtn" class="btn btn-primary">🎙 START RECORDING</button>
+            <button id="stopBtn" class="btn btn-secondary" disabled>⏹ STOP & PROCESS</button>
+        </div>
+
+        <div class="status-panel">
+            <div class="status-item">
+                <div class="status-label">SYSTEM STATUS</div>
+                <div class="status-value" id="status">STANDBY</div>
+            </div>
+            <div class="status-item">
+                <div class="status-label">SIGNAL QUALITY</div>
+                <div class="status-value" id="snr">-- dB</div>
+            </div>
+        </div>
+
+        <div class="loader" id="loader"></div>
+        <div class="progress-bar" id="progressBar">
+            <div class="progress-fill"></div>
+        </div>
+
+        <div class="metrics-grid" id="metrics">
+            <div class="metric-card">
+                <div class="metric-title">ORIGINAL RMS</div>
+                <div class="metric-number" id="originalRms">--</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-title">CLEANED RMS</div>
+                <div class="metric-number" id="cleanedRms">--</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-title">NOISE RMS</div>
+                <div class="metric-number" id="noiseRms">--</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-title">SAMPLE RATE</div>
+                <div class="metric-number" id="sampleRate">--</div>
+            </div>
+        </div>
+
+        <div class="visualization">
+            <h3>📊 SIGNAL ANALYSIS</h3>
+            <img id="graph" src="" alt="Signal Analysis Graph" style="width: 100%; opacity: 0.5;">
+        </div>
+
+        <div class="audio-player">
+            <h3>🎧 PROCESSED AUDIO</h3>
+            <audio id="audioPlayer" controls></audio>
+        </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
